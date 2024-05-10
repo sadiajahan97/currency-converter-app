@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter App</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <script defer type="module" src="src/main.ts"></script>
+  </head>
+  <body>
+    <header>
+      <h1>CURRENCY CONVERTER APP</h1>
+    </header>
+    <main>
+      <div class="form" role="form">
+        <div class="input" role="form">
+          <label for="amount">AMOUNT:</label>
+          <input id="amount" min="0" placeholder="Amount" step="0.01" type="number" />
+        </div>
+        <div class="input" role="form">
+          <label for="base">FROM:</label>
+          <div class="combobox" role="combobox">
+            <input autocomplete="off" id="base" placeholder="Base" role="searchbox" type="text" />
+            <ul role="listbox"></ul>
+          </div>
+        </div>
+        <div class="input" role="form">
+          <label for="target">TO:</label>
+          <div class="combobox" role="combobox">
+            <input
+              autocomplete="off"
+              id="target"
+              placeholder="Target"
+              role="searchbox"
+              type="text" />
+            <ul role="listbox"></ul>
+          </div>
+        </div>
+        <button>CONVERT</button>
+      </div>
+      <table>
+        <tbody>
+          <tr>
+            <th>CONVERSION RATE</th>
+            <td id="rate"></td>
+          </tr>
+          <tr>
+            <th>CONVERSION RESULT</th>
+            <td id="result"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="error"></p>
+    </main>
+  </body>
+</html>
